@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  padding: 0 15em;
+}
+
+main {
+  display: flex;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.5rem;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+p {
+  font-size: 15px;
+  margin-top: 2rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  height: 100%;
+  mix-blend-mode: luminosity;
+}
+
+.mobile_header {
+  display: none;
+}
+
+.text {
+  padding: 5em;
+}
+
+.ratings {
+  display: flex;
+  margin-top: 5em;
+  gap: 5em;
+}
+
+.ratings div {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.ratings div .stats {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+.ratings div .stat_heading {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  color: hsla(0, 0%, 100%, 0.6);
+  margin-top: 0.5em;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+    .text {
+        padding: 3em;
+    }
+    
+}
+
+@media screen and (max-width: 912px) {
+  body {
+    padding: 1em;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .text {
+    padding: 1em;
+    margin-top: 1.5em;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  .ratings {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+    gap: 3em;
+  }
+
+  .ratings > div {
+    align-items: center;
+  } 
+
+  .desktop_header {
+    display: none;
+  }
+
+  .mobile_header {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.5rem;
+  }
+}
